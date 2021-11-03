@@ -1,0 +1,12 @@
+.container{
+    height: 75%;
+    background-color: #E3F2FD;
+}
+
+material-icon{
+    margin-right: 3rem ;
+}
+
+button{
+    margin: 1rem auto 0 1rem;
+}

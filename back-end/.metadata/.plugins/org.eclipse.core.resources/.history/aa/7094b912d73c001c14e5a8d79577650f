@@ -1,0 +1,13 @@
+package br.com.fnc;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FncLabApplication i{
+
+	public static void main(String[] args) {
+		SpringApplication.run(FncLabApplication.class, args);
+	}
+
+}

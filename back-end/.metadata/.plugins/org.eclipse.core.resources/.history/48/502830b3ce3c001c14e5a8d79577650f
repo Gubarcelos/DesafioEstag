@@ -1,0 +1,14 @@
+package br.com.fnc.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exame {
+	
+	private Integer id;
+	private Paciente paciente;
+	private String dataColeta;
+	private String dataResultado;
+	
+	private List<Procedimento> procedimentos = new ArrayList<>();
+}

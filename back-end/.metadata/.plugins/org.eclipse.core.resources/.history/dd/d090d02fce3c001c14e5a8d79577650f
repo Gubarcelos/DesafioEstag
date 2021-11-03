@@ -1,0 +1,11 @@
+package br.com.fnc.domain;
+
+public class Exame {
+	
+	private Integer id;
+	private Paciente paciente;
+	private String dataColeta;
+	private String dataResultado;
+	
+	
+}

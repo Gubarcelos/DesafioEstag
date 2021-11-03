@@ -1,0 +1,16 @@
+.container {
+    width: 90%;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  table{
+      width: 100%;
+  }
+
+  .form{
+      
+    margin-left: 5rem;
+  }
+

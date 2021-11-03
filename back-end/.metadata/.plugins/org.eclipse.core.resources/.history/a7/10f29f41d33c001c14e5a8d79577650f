@@ -1,0 +1,26 @@
+package br.com.fnc;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import br.com.fnc.domain.Exame;
+import br.com.fnc.domain.Paciente;
+
+@SpringBootApplication
+public class FncLabApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(FncLabApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		Paciente pc1 = new Paciente(null, "Maria Aparecida", "422.374.228-00", "maria.123@123.com");
+		Exame ex1 = new Exame(null, pc1, "12/10/2021", "11/11/20221")
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package br.com.fnc.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Paciente {
+	
+	private Integer id;
+	private String cpf;
+	private String email;
+	
+	
+	private List<Exame> Exames = new ArrayList<>();
+
+
+	public Paciente() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

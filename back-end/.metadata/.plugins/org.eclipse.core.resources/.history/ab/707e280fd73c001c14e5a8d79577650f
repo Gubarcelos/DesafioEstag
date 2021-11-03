@@ -1,0 +1,33 @@
+package br.com.fnc;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import br.com.fnc.domain.Exame;
+import br.com.fnc.domain.Paciente;
+import br.com.fnc.domain.Procedimento;
+import br.com.fnc.repositories.ExameRepository;
+import br.com.fnc.repositories.PacienteRepository;
+import br.com.fnc.repositories.ProcedimentoRepository;
+
+@SpringBootApplication
+public class FncLabApplication implements CommandLineRunner{
+
+	
+	
+	public static void main(String[] args) {
+		SpringApplication.run(FncLabApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		
+		
+	}
+
+}
