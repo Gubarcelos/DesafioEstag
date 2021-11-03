@@ -1,0 +1,5 @@
+package br.com.fnc.resources.exceptions;
+
+public class ResourceExceptionHandler {
+
+}
