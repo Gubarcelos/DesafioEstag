@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity//informa que é uma entidade
 public class Procedimento implements Serializable{
 	
@@ -21,6 +23,7 @@ public class Procedimento implements Serializable{
 	private String nome;
 	private String prazoAnalise;
 	
+	@JsonIgnore
 	@ManyToOne//indica a relação com exames
 	@JoinColumn(name = "exame_id") //cria coluna relacionando id
 	private Exame exame;

@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Exame implements Serializable{
 	
@@ -22,6 +24,7 @@ public class Exame implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //gera a chave primaria
 	private Integer id;
 	
+	@JsonIgnore
 	@ManyToOne//relaciona com pacientes
 	@JoinColumn(name = "paciente_id")
 	private Paciente paciente;

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({ "br.com.fnc.config", "br.com.fnc.services" })
+@ComponentScan({ "br.com.fnc.config", "br.com.fnc.services","br.com.fnc.resources"})
 public class FncLabApplication {
 
 	public static void main(String[] args) {

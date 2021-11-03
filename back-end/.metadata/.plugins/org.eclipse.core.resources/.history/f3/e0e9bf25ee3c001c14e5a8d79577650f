@@ -1,0 +1,5 @@
+package br.com.fnc.services;
+
+public class PacienteService {
+
+}
