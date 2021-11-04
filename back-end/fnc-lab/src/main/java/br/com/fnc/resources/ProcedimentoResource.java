@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import br.com.fnc.domain.Procedimento;
 import br.com.fnc.dtos.ProcedimentoDTO;
 import br.com.fnc.services.ProcedimentoService;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/procedimentos")  //classe para busca GET de procedimento
 public class ProcedimentoResource {

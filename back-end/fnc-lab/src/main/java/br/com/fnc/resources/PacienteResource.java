@@ -1,11 +1,13 @@
 package br.com.fnc.resources;
 
 import java.net.URI;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +22,7 @@ import br.com.fnc.domain.Paciente;
 import br.com.fnc.dtos.PacienteDTO;
 import br.com.fnc.services.PacienteService;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/pacientes")  //classe para busca GET de pacientes
 public class PacienteResource {
