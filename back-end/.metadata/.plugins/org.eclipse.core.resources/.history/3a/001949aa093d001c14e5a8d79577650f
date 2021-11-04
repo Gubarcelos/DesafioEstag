@@ -29,10 +29,4 @@ public class PacienteService {
 		
 		return repository.findAll();
 	}
-	
-	public Paciente create(Paciente obj) {
-		//nulo para o jpa não interpretar como atualização
-		obj.setId(null);
-		return repository.save(obj);
-	}
 }

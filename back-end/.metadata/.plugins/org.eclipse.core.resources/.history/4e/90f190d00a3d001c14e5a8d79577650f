@@ -1,6 +1,5 @@
 package br.com.fnc.resources;
 
-import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.com.fnc.domain.Paciente;
 import br.com.fnc.dtos.PacienteDTO;
@@ -44,7 +42,5 @@ public class PacienteResource {
 	@PostMapping  //http post
 	public ResponseEntity<Paciente> create(@RequestBody Paciente obj){
 		obj = service.create(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-		return ResponseEntity.created(uri).build();
 	}
 }
