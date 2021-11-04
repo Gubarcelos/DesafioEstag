@@ -19,9 +19,6 @@ public class ExameService {
 	private ExameRepository repository;
 	
 	@Autowired
-	private ExameService service;
-	
-	@Autowired
 	private PacienteService pacienteService;
 	
 

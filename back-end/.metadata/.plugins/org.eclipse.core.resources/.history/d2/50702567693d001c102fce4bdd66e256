@@ -23,7 +23,6 @@ public class ExameDTO implements Serializable {
 	}
 	public ExameDTO(Exame obj) {
 		super();
-		this.id = obj.getId();
 		this.paciente = obj.getPaciente().getId();
 		this.dataColeta = obj.getDataColeta();
 		this.dataResultado = obj.getDataResultado();
