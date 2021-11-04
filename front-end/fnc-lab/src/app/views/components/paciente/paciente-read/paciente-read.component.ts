@@ -19,17 +19,26 @@ export class PacienteReadComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service : PacienteService){}
+  constructor(
+    
+    private service : PacienteService,
+    private router:Router
+    ){}
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+    
     this.findAll();
   }
 
   findAll():void {
     this.service.findAll().subscribe((resposta)=>{
       this.pacientes = resposta;
-      console.log(this.pacientes)
+      this.dataSource = new MatTableDataSource<Paciente>(this.pacientes);
+      this.dataSource.paginator = this.paginator;
     })
+  }
+  navigateToCreate():void{
+    this.router.navigate(["pacientes/create"])
+
   }
 }

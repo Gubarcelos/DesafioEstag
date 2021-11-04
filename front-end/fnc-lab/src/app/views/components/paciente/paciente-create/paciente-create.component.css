@@ -1,4 +1,16 @@
-.container{
-width: 80%;
+.form{
+width: 50%;
+margin: auto;
+
+}
+
+.full-width{
+    width: 100%;
+}
+
+h1{
+width: 50%;
+margin: auto;
+padding:    20px;
 
 }

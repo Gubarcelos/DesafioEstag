@@ -19,4 +19,9 @@ export class PacienteService {
     const url =this.baseUrl + "/pacientes";
     return this.http.get<Paciente[]>(url);
   }
+
+  create(paciente:Paciente):Observable<Paciente>{
+    const url =this.baseUrl + "/pacientes";
+    return this.http.post<Paciente>(url,paciente);
+  }
 }

@@ -1,1 +1,27 @@
-<p>paciente works</p>
+
+<h1>CADASTRAR PACIENTE</h1>
+<form class="form">
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Ex. G**** L***" >
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input matInput placeholder="222.222.222-22" >
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="end@dominio.com" >
+      </mat-form-field>
+
+      <div class="example-button-row">
+  
+        <button mat-button color="primary">CADASTRAR</button>
+
+        <button (click)="cancel()" mat-button color="warn">CANCELAR</button>
+
+        
+      </div>
+  </form>
