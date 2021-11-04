@@ -3,7 +3,10 @@ package br.com.fnc.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import br.com.fnc.domain.Exame;
@@ -18,8 +21,7 @@ public class ExameService {
 	@Autowired
 	private ExameRepository repository;
 	
-	@Autowired
-	private ExameService service;
+
 	
 	@Autowired
 	private PacienteService pacienteService;
@@ -45,6 +47,24 @@ public class ExameService {
 			return fromDTO(obj);
 		}
 		
+		
+		
+		public Exame update(@Valid ExameDTO obj) {
+			findById(obj.getId());
+			return fromDTO(obj);
+		}
+		
+		//tratamento da excessão banco de dados
+		public void delete(Integer id) {
+			findById(id);
+			try {
+			repository.deleteById(id);
+			} catch (DataIntegrityViolationException e) {
+				throw new br.com.fnc.services.exceptions.DataIntegrityViolationException("O objeto não pode ser deletado, pois possui itens associados");
+			}
+		}
+
+		
 		private  Exame fromDTO(ExameDTO obj) {
 			Exame newObj = new Exame();
 			newObj.setId(obj.getId());
@@ -56,4 +76,7 @@ public class ExameService {
 			
 			return repository.save(newObj);
 		}
+
+
+
 }
