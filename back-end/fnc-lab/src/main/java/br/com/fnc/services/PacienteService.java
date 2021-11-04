@@ -1,5 +1,6 @@
 package br.com.fnc.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,10 @@ public class PacienteService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"Objeto não encontrado! " + id + ",tipo: " + Paciente.class.getName()));
 
+	}
+	
+	public List<Paciente> findAll(){
+		
+		return repository.findAll();
 	}
 }

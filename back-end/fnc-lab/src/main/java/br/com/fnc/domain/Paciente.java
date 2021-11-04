@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 @Entity
 public class Paciente implements Serializable{
 	
@@ -20,6 +22,7 @@ public class Paciente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	@CPF
 	private String cpf;
 	private String email;
 	
