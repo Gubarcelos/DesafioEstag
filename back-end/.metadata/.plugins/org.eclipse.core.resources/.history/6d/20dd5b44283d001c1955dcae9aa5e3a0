@@ -1,0 +1,26 @@
+package br.com.fnc.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.fnc.domain.Exame;
+import br.com.fnc.domain.Paciente;
+import br.com.fnc.domain.Procedimento;
+import br.com.fnc.repositories.PacienteRepository;
+import br.com.fnc.repositories.ProcedimentoRepository;
+import br.com.fnc.services.exceptions.ObjectNotFoundException;
+
+public class ProcedimentoService {
+	@Autowired
+	private ProcedimentoRepository repository;
+	// faz a busca da categoria pelo ID
+		public Procedimento findById(Integer id) {
+
+			
+			Optional<Procedimento> obj = repository.findById(id); // passa menssagem de erro quando não encontra o objeto
+			return obj.orElseThrow(() -> new ObjectNotFoundException(
+					"Objeto não encontrado! " + id + ",tipo: " + Exame.class.getName()));
+
+		}
+}

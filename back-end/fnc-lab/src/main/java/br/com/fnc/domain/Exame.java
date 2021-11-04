@@ -1,6 +1,7 @@
 package br.com.fnc.domain;
 
 import java.io.Serializable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -13,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -28,7 +30,9 @@ public class Exame implements Serializable{
 	@ManyToOne//relaciona com pacientes
 	@JoinColumn(name = "paciente_id")
 	private Paciente paciente;
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private String dataColeta;
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private String dataResultado;
 	
 	@OneToMany(mappedBy = "exame") //relaciona com exames
@@ -36,14 +40,14 @@ public class Exame implements Serializable{
 
 	public Exame() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Exame(Integer id, Paciente paciente, String dataColeta, String dataResultado) {
 		super();
 		this.id = id;
 		this.paciente = paciente;
-		this.dataColeta = dataColeta;
+		this.dataColeta = dataColeta ;
 		this.dataResultado = dataResultado;
 	}
 

@@ -1,0 +1,10 @@
+package br.com.fnc.resources;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value = "/procedimento")  //classe para busca GET de procedimento
+public class ProcedimentoResource {
+
+}
