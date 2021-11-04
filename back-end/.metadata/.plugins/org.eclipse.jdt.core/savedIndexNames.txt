@@ -27,8 +27,8 @@ INDEX VERSION 1.131+/home/gustavo/DesafioEstag/back-end/.metadata/.plugins/org.e
 2058023570.index
 3503771810.index
 2020617749.index
-2811451827.index
 2731811510.index
+2811451827.index
 1124190016.index
 67926566.index
 108428563.index
@@ -45,13 +45,13 @@ INDEX VERSION 1.131+/home/gustavo/DesafioEstag/back-end/.metadata/.plugins/org.e
 3444064949.index
 853861470.index
 3346874457.index
-4057248022.index
 1764150249.index
-1889968256.index
-3299416924.index
 1853165334.index
-1929864195.index
+4057248022.index
+3299416924.index
+1889968256.index
 2029664334.index
+1929864195.index
 3926744191.index
 1982886301.index
 2474618155.index

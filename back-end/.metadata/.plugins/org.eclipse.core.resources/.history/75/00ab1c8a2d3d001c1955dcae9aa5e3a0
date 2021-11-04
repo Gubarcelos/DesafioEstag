@@ -1,0 +1,52 @@
+package br.com.fnc.dtos;
+
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import br.com.fnc.domain.Exame;
+import br.com.fnc.domain.Paciente;
+
+public class ExameDTO implements Serializable {
+
+
+	private static final long serialVersionUID = 1L;
+	private Paciente paciente;
+
+	private String dataColeta;
+
+	private String dataResultado;
+	public ExameDTO(Exame obj) {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public ExameDTO(Paciente paciente, String dataColeta, String dataResultado) {
+		super();
+		this.paciente = paciente;
+		this.dataColeta = dataColeta;
+		this.dataResultado = dataResultado;
+	}
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+	public String getDataColeta() {
+		return dataColeta;
+	}
+	public void setDataColeta(String dataColeta) {
+		this.dataColeta = dataColeta;
+	}
+	public String getDataResultado() {
+		return dataResultado;
+	}
+	public void setDataResultado(String dataResultado) {
+		this.dataResultado = dataResultado;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	
+}

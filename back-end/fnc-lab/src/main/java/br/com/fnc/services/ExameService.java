@@ -1,5 +1,6 @@
 package br.com.fnc.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ public class ExameService {
 
 	@Autowired
 	private ExameRepository repository;
+	
+
+	
 	// faz a busca da categoria pelo ID
 		public Exame findById(Integer id) {
 
@@ -22,5 +26,10 @@ public class ExameService {
 			return obj.orElseThrow(() -> new ObjectNotFoundException(
 					"Objeto não encontrado! " + id + ",tipo: " + Exame.class.getName()));
 
+		}
+
+		public List<Exame> findAll() {
+			return repository.findAll();
+			
 		}
 }

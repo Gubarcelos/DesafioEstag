@@ -1,0 +1,9 @@
+package br.com.fnc.dtos;
+
+public class ProcedimentoDTO {
+	private Integer id;
+	private String nome;
+	private String prazoAnalise;
+	
+	
+}

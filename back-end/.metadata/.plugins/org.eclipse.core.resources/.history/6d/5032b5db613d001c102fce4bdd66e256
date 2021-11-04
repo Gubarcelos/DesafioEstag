@@ -1,0 +1,22 @@
+package br.com.fnc.dtos;
+
+import java.io.Serializable;
+
+
+
+import br.com.fnc.domain.Exame;
+import br.com.fnc.domain.Paciente;
+
+public class ExameDTO implements Serializable {
+
+
+	private static final long serialVersionUID = 1L;
+	private Integer paciente;
+	private String dataColeta;
+	private String dataResultado;
+	
+	
+
+
+	
+}

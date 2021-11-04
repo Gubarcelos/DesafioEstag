@@ -1,0 +1,27 @@
+package br.com.fnc.resources;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.fnc.domain.Procedimento;
+import br.com.fnc.services.ProcedimentoService;
+
+@RestController
+@RequestMapping(value = "/procedimentos")  //classe para busca GET de procedimento
+public class ProcedimentoResource {
+	@Autowired
+	private ProcedimentoService service;
+	
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Procedimento> findById(@PathVariable Integer id) {
+		Procedimento obj = service.findById(id);
+		return ResponseEntity.ok().body(obj);
+
+	}
+	// localhost:8080/exame/id
+
+}

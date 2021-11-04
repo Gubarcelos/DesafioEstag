@@ -1,0 +1,22 @@
+package br.com.fnc.dtos;
+
+import br.com.fnc.domain.Procedimento;
+
+public class ProcedimentoDTO {
+	private Integer id;
+	private String nome;
+	private String prazoAnalise;
+	public ProcedimentoDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public ProcedimentoDTO(Procedimento obj) {
+		super();
+		this.id = obj.getId();
+		this.nome = obj.getNome();
+		this.prazoAnalise = obj.getPrazoAnalise();
+	}
+	
+	
+	
+}
