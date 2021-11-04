@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Paciente } from '../models/paciente';
+
 
 
 @Injectable({
@@ -8,13 +11,12 @@ import { Paciente } from '../models/paciente';
 })
 export class PacienteService {
 
-  paciente!:Paciente[] 
+  baseUrl: String = environment.baseUrl;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient){ }
 
-  Url='http://localhost:8080/fncLabs/paciente'
-
-  getPacientes(){
-    return this.http.get<Paciente[]>(this.Url)
+  findAll():Observable<Paciente[]>{
+    const url =this.baseUrl + "/pacientes";
+    return this.http.get<Paciente[]>(url);
   }
 }
